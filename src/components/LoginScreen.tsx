@@ -21,7 +21,8 @@ const translations = {
     otpPlaceholder: '123456',
     sendOtp: 'Send OTP',
     verify: 'Verify & Login',
-    doctorWave: '👋 Welcome to better healthcare!'
+    doctorWave: '👋 Welcome to better healthcare!',
+    prototypeNote: 'Prototype only: any phone number and OTP will work for now.'
   },
   pa: {
     title: 'ਰੂਰਲ ਹੈਲਥ ਕਨੇਕਟ',
@@ -32,7 +33,8 @@ const translations = {
     otpPlaceholder: '123456',
     sendOtp: 'OTP ਭੇਜੋ',
     verify: 'ਤਸਦੀਕ ਅਤੇ ਲਾਗਿਨ',
-    doctorWave: '👋 ਬਿਹਤਰ ਸਿਹਤ ਸੇਵਾ ਵਿੱਚ ਸੁਆਗਤ!'
+    doctorWave: '👋 ਬਿਹਤਰ ਸਿਹਤ ਸੇਵਾ ਵਿੱਚ ਸੁਆਗਤ!',
+    prototypeNote: 'ਸਿਰਫ਼ ਪ੍ਰੋਟੋਟਾਈਪ: ਇਸ ਵੇਲੇ ਕੋਈ ਵੀ ਫ਼ੋਨ ਨੰਬਰ ਅਤੇ OTP ਕੰਮ ਕਰੇਗਾ.'
   },
   hi: {
     title: 'रूरल हेल्थकनेक्ट',
@@ -43,7 +45,8 @@ const translations = {
     otpPlaceholder: '123456',
     sendOtp: 'OTP भेजें',
     verify: 'सत्यापित करें और लॉगिन',
-    doctorWave: '👋 बेहतर स्वास्थ्य सेवा में स्वागत!'
+    doctorWave: '👋 बेहतर स्वास्थ्य सेवा में स्वागत!',
+    prototypeNote: 'केवल प्रोटोटाइप: फिलहाल कोई भी फ़ोन नंबर और OTP काम करेगा.'
   }
 };
 
@@ -107,6 +110,7 @@ export function LoginScreen({ onLogin, language, onLanguageChange }: LoginScreen
                 {t.sendOtp}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+              <p className="text-xs text-muted-foreground text-center">{t.prototypeNote}</p>
             </div>
           ) : (
             <div className="space-y-6">
@@ -129,6 +133,7 @@ export function LoginScreen({ onLogin, language, onLanguageChange }: LoginScreen
                 {t.verify}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+              <p className="text-xs text-muted-foreground text-center">{t.prototypeNote}</p>
             </div>
           )}
         </Card>
