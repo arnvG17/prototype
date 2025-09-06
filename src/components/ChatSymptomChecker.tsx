@@ -36,6 +36,7 @@ const translations = {
     durationQuestion: "How long have you had this problem?",
     severityQuestion: "Is the pain mild or strong?",
     relatedQuestion: "Do you also have",
+    anyOtherSymptoms: "any other symptoms?",
     suggestion: "Based on your symptoms, here are some suggestions:",
     disclaimer: "This is not a medical diagnosis. Please consult a doctor for proper treatment."
   },
@@ -53,6 +54,7 @@ const translations = {
     durationQuestion: "ਇਹ ਸਮੱਸਿਆ ਤੁਹਾਨੂੰ ਕਿੰਨੇ ਦਿਨ ਤੋਂ ਹੈ?",
     severityQuestion: "ਕੀ ਦਰਦ ਜ਼ਿਆਦਾ ਹੈ ਜਾਂ ਹਲਕਾ?",
     relatedQuestion: "ਕੀ ਤੁਹਾਨੂੰ",
+    anyOtherSymptoms: "ਹੋਰ ਕੋਈ ਲੱਛਣ?",
     suggestion: "ਤੁਹਾਡੇ ਲੱਛਣਾਂ ਦੇ ਆਧਾਰ ਤੇ, ਇਹ ਸੁਝਾਅ ਹਨ:",
     disclaimer: "ਇਹ ਮੈਡੀਕਲ ਡਾਇਗਨੋਸਿਸ ਨਹੀਂ ਹੈ। ਸਹੀ ਇਲਾਜ ਲਈ ਡਾਕਟਰ ਨਾਲ ਸਲਾਹ ਕਰੋ।"
   },
@@ -70,6 +72,7 @@ const translations = {
     durationQuestion: "यह समस्या आपको कितने दिनों से है?",
     severityQuestion: "क्या दर्द तेज है या हल्का?",
     relatedQuestion: "क्या आपको",
+    anyOtherSymptoms: "कोई अन्य लक्षण?",
     suggestion: "आपके लक्षणों के आधार पर, ये सुझाव हैं:",
     disclaimer: "यह चिकित्सा निदान नहीं है। उचित उपचार के लिए डॉक्टर से सलाह लें।"
   }
@@ -282,7 +285,7 @@ export function ChatSymptomChecker({ language, onBack, onNavigate }: ChatSymptom
       };
     }
     
-    const question = relatedQuestions[primarySymptom] || `${t.relatedQuestion} any other symptoms?`;
+    const question = relatedQuestions[primarySymptom] || `${t.relatedQuestion} ${t.anyOtherSymptoms}`;
     addAIMessage(question, 1000);
   };
 
