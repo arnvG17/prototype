@@ -14,13 +14,7 @@
  * Formats a timestamp into a readable date and time string.
  */
 const formatTime = (timestamp) => {
-  if (!timestamp) return 'N/A';
-  // Check if the timestamp is a string or number that represents a Date
-  const date = new Date(timestamp);
-  // Check if the date object is valid
-  if (isNaN(date.getTime())) return 'N/A';
-  return date.toLocaleString(); 
-};
+
 
 // --- END: Helper Functions ---
 
