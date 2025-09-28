@@ -7,13 +7,7 @@
 
   Run `npm i` to install the dependencies.
 
-  Run `npm run dev` to start the development server.
-  import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { io } from 'socket.io-client'; // 💡 New: Import the Socket.IO client
 
-// Fix environment variable access for broader compatibility
-const BACKEND_URL = process.env.REACT_APP_BACKEND || "https://git4ds.onrender.com";
 
 // --- START: Helper Functions ---
 
